@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up - TopFit</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./images/favicon.ico" type='image/x-icon'/ >
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="Semantic-UI-CSS-master/components/dropdown.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+    <script src="https://kit.fontawesome.com/8479702f72.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('.ui.dropdown').dropdown();
+        $('.ui.checkbox').checkbox();
+        $('form').h5Validate({errorClass:'validationError' });
+        $('#credit-card').on('keypress change', function () {
+          $(this).val(function (index, value) {
+            console.log(value);
+            let newValue = value;
+            if (value.toString().length !== 22) {
+              newValue = value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');
+            }
+            return newValue;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="ui top menu">
+      <div class="item">
+        <img src="images//top-fit-logo.png" style="width: 5.5em">
+      </div>
+      <a class="item" href="index.html">Home</a>
+      <a class="item" href="slitslider.html">About SlitSlider</a>
+      <a class="item" href="gallery.html">Gallery</a>
+      <a class="active item" href="signup.html">Sign Up</a>
+    </div>
+    <div class="content-container">
+      <h1 class="ui header center aligned">Sign Up</h1>
+      <p class="ui container center aligned">Fill out the below form to sign up to TopFit</p>
+
+      <div class="form">
+          <form action="process.html" method="get" name="signup" id="signup" role="form" class="ui form" data-h5-instanceid="0" novalidate="novalidate">
+            <h4 class="ui dividing header">Shipping Information</h4>
+            <div class="field">
+              <label>Name</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="name" placeholder="First Name" data-h5-errorid="invalid-name" title="Please enter a valid name with First Letter capitalised" pattern="[A-Z][a-z]+( [A-Z][a-z]+)?" required>
+                  <div id="invalid-name" class="form-error"></div>
+                </div>
+                <div class="field">
+                  <input type="text" name="surname" placeholder="Last Name" data-h5-errorid="invalid-surname" title="Please enter a valid last name with First Letter capitalised" pattern="[A-Z][a-z]+( [A-Z][a-z]+)?"  required>
+                  <div id="invalid-surname" class="form-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Gender</label>
+              <select class="ui fluid search dropdown" data-h5-errorid="invalid-gender" required>
+                <option value=""></option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <div id="invalid-gender" class="form-error"></div>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input name="email" placeholder="Email" type="email" id="email" data-h5-errorid="invalid-email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" title="Please enter a valid email" required>
+              <div id="invalid-email" class="form-error"></div>
+            </div>
+            <div class="field">
+              <label>Address</label>
+              <div class="fields">
+                <div class="twelve wide field">
+                  <input type="text" name="shipping[address]" placeholder="Street Address" required data-h5-errorid="invalid-address" title="Please enter a valid address">
+                  <div id="invalid-address" class="form-error"></div>
+                </div>
+                <div class="four wide field">
+                  <input type="text" name="shipping[address-2]" placeholder="Apt #">
+                </div>
+              </div>
+            </div>
+            
+            <h4 class="ui dividing header">Billing Information</h4>
+            <div class="field">
+              <label>Card Type</label>
+              <div class="ui selection dropdown">
+                <input type="hidden" name="card[type]" required >
+                <div class="default text">Type</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item" data-value="visa">
+                    <i class="fab fa-cc-visa"></i>
+                    Visa
+                  </div>
+                  <div class="item" data-value="amex">
+                    <i class="fab fa-cc-mastercard"></i>
+                    Mastercard
+                  </div>
+                  <div class="item" data-value="discover">
+                    <i class="fab fa-cc-amex"></i>
+                    American Express
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="seven wide field">
+                <label>Card Number</label>
+                <input type="text" name="card[number]" id="credit-card" maxlength="22" placeholder="Card #" pattern="[0-9 ]+" data-h5-errorid="invalid-card-number" title="Please enter a valid card number" required>
+                <div id="invalid-card-number" class="form-error"></div>
+              </div>
+              <div class="three wide field">
+                <label>CVC</label>
+                <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC" title="Please enter a CVC code" pattern="[0-9]{3}" data-h5-errorid="invalid-cvc" required>
+                <div id="invalid-cvc" class="form-error"></div>
+              </div>
+              <div class="six wide field">
+                <label>Expiration</label>
+                <div class="two fields">
+                  <div class="field">
+                    <select class="ui fluid search dropdown" name="card[expire-month]" data-h5-errorid="invalid-expiration" required title="Please select an expiry month for your card">
+                      <option value="">Month</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                      <option value="6">June</option>
+                      <option value="7">July</option>
+                      <option value="8">August</option>
+                      <option value="9">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                    </select>
+                    <div id="invalid-expiration" class="form-error"></div>
+                  </div>
+                  
+                  <div class="field">
+                    <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year" required pattern="[0-9]{4}" data-h5-errorid="invalid-year" required title="Please enter a valid 4 digit year">
+                    <div class="form-error" id="invalid-year"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="ui segment">
+              <div class="field">
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" name="gift" tabindex="0" class="hidden">
+                  <label>Send me emails about new offers and products</label>
+                </div>
+              </div>
+            </div>
+            <input type="submit" class="ui primary button" value="Sign Up">
+          </form>
+          <div id="submission-feedback"></div>
+      </div>
+    </div>
+    <footer class="ui container center aligned">
+      2020 &copy; TopFit. All Rights Reserved.
+    </footer>
+    <div class="college-notice">
+      This is a college project
+    </div>
+  </body>
+</html>

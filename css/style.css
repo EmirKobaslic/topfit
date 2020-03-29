@@ -1,0 +1,51 @@
+.content-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+footer {
+  padding: 20px;
+}
+
+.segment img {
+  width: 100%;
+}
+
+.form-error {
+  color: red;
+}
+
+#submission-feedback {
+  padding-top: 20px;
+}
+
+.ui.form .success.message {
+  display: block !important;
+}
+
+#slit-slider {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+code {
+  white-space: pre-wrap;
+}
+
+.container {
+  padding: 10px 0;
+}
+
+.subscriptions {
+  padding-top: 20px;
+}
+
+.college-notice {
+  text-align: center;
+  background: #1e242a;
+  padding: 10px;
+  color: #fff;
+}

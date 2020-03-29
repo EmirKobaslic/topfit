@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About SlitSlider - TopFit</title>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./images/favicon.ico" type='image/x-icon'/ >
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="ui top menu">
+      <div class="item">
+        <img src="images//top-fit-logo.png" style="width: 5.5em">
+      </div>
+      <a class="item" href="index.html">Home</a>
+      <a class="active item" href="slitslider.html">About SlitSlider</a>
+      <a class="item" href="gallery.html">Gallery</a>
+      <a class="item" href="signup.html">Sign Up</a>
+    </div>
+    <div class="content-container">
+        <h1 class="ui header center aligned">About SlitSlider</h1>
+        <p class="ui container center aligned">A responsive slideshow with a twist: the idea is to slice open the current slide when navigating to the next or previous one. Using jQuery and CSS animations we can create unique slide transitions for the content elements.</p>  
+        <p class="ui container center aligned">Our homepage is using this slider.</p>
+        <div class="ui placeholder segment">
+          <div class="ui icon header">
+            <img id="slit-slider" src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2012/06/SlitSlider.jpg">
+          </div>
+          <div class="ui primary button"><a href="https://github.com/codrops/SlitSlider" target="_blank" style="color: white">Download on GitHub</a></div>
+        </div>
+
+        <h1 class="ui header center aligned">Code implementation</h1>
+        <div class="ui placeholder segment">
+          <pre>
+            <code>
+&lt;div class="container demo-1"&gt;
+  &lt;div id="slider" class="sl-slider-wrapper"&gt;
+    &lt;div class="sl-slider"&gt;
+      &lt;div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2"&gt;
+        &lt;div class="sl-slide-inner"&gt;
+          &lt;div class="image-box__overlay"&gt;&lt;/div&gt;
+            &lt;h2&gt;Fitness&lt;/h2&gt;
+            &lt;blockquote&gt;&lt;p&gt;I don’t run to add days to my life, I run to add life to my days&lt;cite&gt;Ronald
+                Rook&lt;/cite&gt;&lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;nav id="nav-arrows" class="nav-arrows"&gt;
+        &lt;span class="nav-arrow-prev"&gt;Previous&lt;/span&gt;
+        &lt;span class="nav-arrow-next"&gt;Next&lt;/span&gt;
+      &lt;/nav&gt;
+
+      &lt;nav id="nav-dots" class="nav-dots"&gt;
+        &lt;span class="nav-dot-current"&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+
+    </div>
+    <footer class="ui container center aligned">
+      2020 &copy; TopFit. All Rights Reserved.
+    </footer>
+    <div class="college-notice">
+      This is a college project
+    </div>
+  </body>
+</html>

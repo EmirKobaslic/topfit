@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<title>TopFit - Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Fullscreen Slit Slider with CSS3 and jQuery" />
+		<meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay" />
+		<meta name="author" content="Codrops" />
+		<link rel="icon" href="./images/favicon.ico" type='image/x-icon'/ >
+		<link rel="stylesheet" type="text/css" href="slider/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="slider/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="slider/css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="slider/js/modernizr.custom.79639.js"></script>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="slider/css/styleNoJS.css" />
+		</noscript>
+		<link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css" />
+
+		<script>
+			$(document).ready(function() {
+				$('.image img').mouseover(function () {
+					$(this).fadeOut(function(){
+            $(this).attr("src", $(this).data("hover"));
+            $(this).fadeIn();
+        });
+				}).mouseout(function () {
+					$(this).fadeOut(function() {
+						$(this).attr('src', $(this).data("src"));
+						$(this).fadeIn();
+					})
+					
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="ui top fixed menu">
+			<div class="item">
+				<img src="images//top-fit-logo.png" style="width: 5.5em">
+			</div>
+			<a class="active item" href="index.html">Home</a>
+			<a class="item" href="slitslider.html">About SlitSlider</a>
+			<a class="item" href="gallery.html">Gallery</a>
+			<a class="item" href="signup.html">Sign Up</a>
+		</div>
+		<div class="container demo-1">
+		<div id="slider" class="sl-slider-wrapper">
+			<div class="sl-slider">
+				<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+					<div class="sl-slide-inner">
+						<div class="image-box__overlay"></div>
+							<h2>Fitness</h2>
+							<blockquote><p>I don’t run to add days to my life, I run to add life to my days<cite>Ronald Rook</cite></blockquote>
+						</div>
+					</div>
+				
+				<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+					<div class="image-box__overlay"></div>
+						<div class="sl-slide-inner">
+							<h2>Gym</h2>
+							<blockquote><p>The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not a champion.</p><cite>Arnold Schwarzenegger</cite></blockquote>
+						</div>
+					</div>
+				
+				<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+					<div class="sl-slide-inner">
+						<div class="image-box__overlay"></div>
+						<h2>Swimming Pool</h2>
+						<blockquote><p>Win if you can, lose if you must, but never quit.</p><cite>Cameron Trammell</cite></blockquote>
+					</div>
+				</div>
+				
+				<div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+					<div class="sl-slide-inner">
+						<div class="image-box__overlay"></div>
+						<h2>Sauna</h2>
+						<blockquote><p>You need to empty your mind, and relax each other muscle group until you feel like you are going to melt into the floor. Then you just let it all go. All the expectations, all the unneeded worry, all the things other people want for you but you don't want for yourself.</p><cite>Kasie West</cite></blockquote>
+					</div>
+				</div>
+			</div><!-- /sl-slider -->
+			
+			<nav id="nav-arrows" class="nav-arrows">
+				<span class="nav-arrow-prev">Previous</span>
+				<span class="nav-arrow-next">Next</span>
+			</nav>
+
+			<nav id="nav-dots" class="nav-dots">
+				<span class="nav-dot-current"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
+		</div><!-- /slider-wrapper -->
+	</div>
+	<div class="content-container">
+		<h1 class="ui header center aligned">About TopFit</h1>
+		<p class="ui container center aligned">The TopFit Gym Waterford offers its members full size astroturf facilities, tennis courts, sports hall and a children’s party zone. After all this activity you can unwind with friends in our café. If you love swimming or feel like relaxing, why not try our 25m pool for size. We offer swimming lessons for the young and old as well aqua aerobics and dedicated lanes for those feeling energetic.</p>
+
+		<p class="ui container center aligned">Our gym is staffed by qualified gym instructors who will be available to discuss members training programmes or for any assistance. Our pool environment is also constantly manned by one of our trained lifeguards to ensure a fully safe pool environment for all members and guests.</p>
+		<h1 class="ui header center aligned">Our Subscriptions</h1>
+		<div class="subscriptions">
+			<div class="ui three column grid">
+				<div class="column">
+						<div class="ui fluid card">
+						<div class="image">
+							<img src="./images/3-months.png" data-src="./images/3-months.png" data-hover="./images/3-months-hover.png">
+						</div>
+						<div class="content">
+							<a class="header">€90</a>
+							<div class="meta">
+								<span class="date">VAT incl.</span>
+							</div>
+							<div class="description">
+								Get 3 months access to the <b>gym and swimming pool</b> for €90. That is €1 per day.
+							</div>
+						</div>
+						<div class="extra content">
+							<a>
+								<i class="user icon"></i>
+								35 places only left
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+						<div class="ui fluid card">
+						<div class="image">
+								<img src="./images/6-months.png" data-src="./images/6-months.png" data-hover="./images/6-months-hover.png">
+						</div>
+						<div class="content">
+							<a class="header">€150</a>
+							<div class="meta">
+								<span class="date">VAT incl.</span>
+							</div>
+							<div class="description">
+									Get 6 months access to the <b>gym, swimming pool and sauna</b> for €150. That is €0.83 per day.
+							</div>
+						</div>
+						<div class="extra content">
+							<a>
+								<i class="user icon"></i>
+								20 places left
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+						<div class="ui fluid card">
+						<div class="image">
+								<img src="./images/12-months.png" data-src="./images/12-months.png" data-hover="./images/12-months-hover.png">
+						</div>
+						<div class="content">
+							<a class="header">€280</a>
+							<div class="meta">
+								<span class="date">VAT incl.</span>
+							</div>
+							<div class="description">
+								Get 12 months access to the <b>gym, swimming pool, sauna and personal trainer</b> for €280. That is €0.77 per day.
+							</div>
+						</div>
+						<div class="extra content">
+							<a>
+								<i class="user icon"></i>
+								45 places left
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="ui container center aligned">
+		2020 &copy; TopFit. All Rights Reserved.
+	</footer>
+	<div class="college-notice">
+		This is a college project
+	</div>
+	</body>
+</html>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="slider/js/jquery.ba-cond.min.js"></script>
+		<script type="text/javascript" src="slider/js/jquery.slitslider.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ),
+						$nav = $( '#nav-dots > span' ),
+						slitslider = $( '#slider' ).slitslider( {
+							onBeforeChange : function( slide, pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':last' ).on( 'click', function() {
+
+								slitslider.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':first' ).on( 'click', function() {
+								
+								slitslider.previous();
+								return false;
+
+							} );
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slitslider.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slitslider.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+				/**
+				 * Notes: 
+				 * 
+				 * example how to add items:
+				 */
+
+				/*
+				
+				var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+				
+				// call the plugin's add method
+				ss.add($items);
+
+				*/
+			
+			});
+		</script>
+	</body>
+</html>
